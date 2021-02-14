@@ -72,3 +72,10 @@ document
   .addEventListener("click", function () {
     message.remove();
   });
+
+message.style.backgroundColor = "#37383d";
+
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + "px";
+
+document.documentElement.style.setProperty("--color-primary", "orangered");
