@@ -32,27 +32,27 @@ document.addEventListener("keydown", function (e) {
 
 // console.log(document.documentElement);
 
-const header = document.querySelector(".header");
-const allSelection = document.querySelectorAll(".section");
-// console.log(allSelection);
+// const header = document.querySelector(".header");
+// const allSelection = document.querySelectorAll(".section");
+// // console.log(allSelection);
 
-document.getElementById("section--1");
-const allButtons = document.getElementsByTagName("button");
-// console.log(allButtons);
+// document.getElementById("section--1");
+// const allButtons = document.getElementsByTagName("button");
+// // console.log(allButtons);
 
-document.getElementsByClassName("btn");
+// document.getElementsByClassName("btn");
 
 //creating and inserting html
 
 // .insertAdjacentHTML
 
-const message = document.createElement("div");
-message.classList.add("cookie-message");
-// message.textContent = 'We use cookies for smth';
-message.innerHTML =
-  'We use cookies for smth <button class = "btn btn--close--cookie">Got it!</button>';
+// const message = document.createElement("div");
+// message.classList.add("cookie-message");
+// // message.textContent = 'We use cookies for smth';
+// message.innerHTML =
+//   'We use cookies for smth <button class = "btn btn--close--cookie">Got it!</button>';
 
-header.append(message);
+// header.append(message);
 // header.append(message);
 // header.append(message.cloneNode(true));
 // // console.log(message);
@@ -67,15 +67,32 @@ header.append(message);
 
 // header.before(message);
 // header.after(message.cloneNode(true));
-document
-  .querySelector(".btn--close--cookie")
-  .addEventListener("click", function () {
-    message.remove();
-  });
+// document
+//   .querySelector(".btn--close--cookie")
+//   .addEventListener("click", function () {
+//     message.remove();
+//   });
 
-message.style.backgroundColor = "#37383d";
+// message.style.backgroundColor = "#37383d";
 
-message.style.height =
-  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + "px";
+// message.style.height =
+//   Number.parseFloat(getComputedStyle(message).height, 10) + 30 + "px";
 
-document.documentElement.style.setProperty("--color-primary", "orangered");
+// document.documentElement.style.setProperty("--color-primary", "orangered");
+
+// // attributes
+
+// const logo = document.querySelector(".nav__logo");
+// console.log(logo.alt);
+// console.log(logo.src);
+
+const btnScrollTo = document.querySelector(".btn--scroll-to");
+const section1 = document.querySelector("#section--1");
+
+btnScrollTo.addEventListener("click", function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  window.scrollTo(
+    s1coords.left + window.pageXOffset,
+    s1coords.top + window.pageYOffset
+  );
+});
