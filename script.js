@@ -153,3 +153,18 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(header);
+
+var countBits = function (n) {
+  // Program Me
+  const temp = n
+    .toString(2)
+    .split("")
+    .map((num) => +num)
+    .filter((el) => el === 1);
+  // console.log(temp);
+  return temp.length > 0 ? temp.reduce((acc, el) => acc + el) : 0;
+  // console.log(n.toString(2));
+  // console.log(temp);
+};
+
+console.log(countBits(0));
